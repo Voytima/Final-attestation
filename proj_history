@@ -1,0 +1,28 @@
+1  cat > 'Домашние животные'
+2  ll
+3  cat > 'Вьючные животные'
+4  ll
+5  cat Домашние\ животные Вьючные\ животные Животные
+6  cat Домашние\ животные Вьючные\ животные > Животные
+7  cat Животные
+8  mv Животные 'Друзья человека'
+9  cat Друзья\ человека
+0  mkdir Animals
+1  mv Друзья\ человека Animals/
+2  ll Animals/
+3  wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+4  sudo dpkg -i ./mysql-apt-config_0.8.24-1_all.deb
+5  sudo apt update
+6  sudo apt install mysql-server mysql-client
+7  mysql_secure_installation
+8  mysql -u root -p
+9  mkdir nginx-pkg
+0  ll
+1  cd nginx-pkg/
+2  wget https://nginx.org/packages/ubuntu/pool/nginx/n/nginx/nginx_1.22.1-1~jammy_amd64.deb
+3  sudo dpkg -i ./nginx_1.22.1-1~jammy_amd64.deb
+4  apt list --installed | grep nginx
+5  nginx -v
+6  man dpkg
+7  sudo dpkg -P nginx
+8  dpkg -l | grep nginx
